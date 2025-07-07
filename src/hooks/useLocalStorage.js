@@ -49,19 +49,3 @@ export const useLocalStorage = (key, initialValue) => {
 
     return [storedValue, setValue, clearValue];
 };
-
-/**
- * Hook for managing multiple localStorage keys at once
- * @param {object} keys - Object with key-value pairs for localStorage keys and initial values
- * @returns {object} - Object with values, setters, and clear functions
- */
-export const useMultipleLocalStorage = (keys) => {
-    const result = {};
-    
-    Object.entries(keys).forEach(([name, { key, initialValue }]) => {
-        const [value, setValue, clearValue] = useLocalStorage(key, initialValue);
-        result[name] = { value, setValue, clearValue };
-    });
-    
-    return result;
-};

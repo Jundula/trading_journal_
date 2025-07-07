@@ -1,4 +1,4 @@
-export { useLocalStorage, useMultipleLocalStorage } from './useLocalStorage';
+export { useLocalStorage } from './useLocalStorage';
 export { useTrades } from './useTrades';
 export { useNewsData } from './useNewsData';
 export { useFilters } from './useFilters';
